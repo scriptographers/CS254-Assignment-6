@@ -1,4 +1,4 @@
-CS 254: Assignment 5
+CS 254: Assignment 6
 
 Team Members:
 1. Devansh Jain  (190100044)
@@ -7,4 +7,5 @@ Team Members:
 File Descriptions:
 
 Q1:
-    EightbitKogStonAddSub.vhd : 
+    
+Q2:
