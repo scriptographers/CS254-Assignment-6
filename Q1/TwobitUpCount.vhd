@@ -53,7 +53,7 @@ begin
   delta0 : NotGate
   port map(a => s(0), z => c(0));
 
-  count(0) <= c(0);
-  count(1) <= c(1);
+  count(0) <= s(0);
+  count(1) <= s(1);
 
 end architecture;
