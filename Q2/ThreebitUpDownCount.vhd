@@ -36,6 +36,13 @@ architecture struct of ThreebitUpDownCount is
 			t1 : out std_logic
 		);
 	end component;
+	
+	component Delta2 is
+	  port (
+		 u, s2, s1, s0 : in std_logic;
+		 t2 : out std_logic
+	  );
+	end component;
 
 begin
 
@@ -58,5 +65,11 @@ begin
   -- Function delta1 = lambda1
   del1 : Delta1
   port map(u => up, s1 => s(1), s0 => s(0), t1 => t(1));
+  
+  -- Function delta2 = lambda2
+  del2 : Delta2
+  port map(u => up, s2 => s(2), s1 => s(1), s0 => s(0), t2 => t(2));
+  
+  count <= s;
 
 end architecture;
