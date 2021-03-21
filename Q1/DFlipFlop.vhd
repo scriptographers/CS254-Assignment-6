@@ -1,4 +1,4 @@
--- Component: D-Flipflops using behavioural code
+-- Component: D-Flipflops (Storage Element) using behavioural code
 library ieee;
 use ieee.std_logic_1164.all;
 

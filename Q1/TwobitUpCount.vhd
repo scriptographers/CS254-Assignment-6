@@ -13,7 +13,7 @@ end entity;
 
 architecture struct of TwobitUpCount is
 
-  signal s, c : std_logic_vector (1 downto 0);
+  signal s, t : std_logic_vector (1 downto 0);
 
   component DFlipFlop is
     port (
@@ -39,21 +39,20 @@ begin
 
   -- Storage Element s1
   s1_storage : DFlipFlop
-  port map(clk => clk, rst => rst, d => c(1), q => s(1));
+  port map(clk => clk, rst => rst, d => t(1), q => s(1));
 
   -- Storage Element s0
   s0_storage : DFlipFlop
-  port map(clk => clk, rst => rst, d => c(0), q => s(0));
+  port map(clk => clk, rst => rst, d => t(0), q => s(0));
 
-  -- Function delta1 = lambda1
-  delta1 : XorGate
-  port map(a => s(1), b => s(0), z => c(1));
+  -- Function delta1
+  del1 : XorGate
+  port map(a => s(1), b => s(0), z => t(1));
 
-  -- Function delta0 = lambda0
-  delta0 : NotGate
-  port map(a => s(0), z => c(0));
+  -- Function delta0
+  del0 : NotGate
+  port map(a => s(0), z => t(0));
 
-  count(0) <= s(0);
-  count(1) <= s(1);
+  count <= s;
 
 end architecture;

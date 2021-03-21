@@ -1,4 +1,4 @@
--- Component: OR Gate
+-- Component: OR Gate using structural modelling
 library work;
 use work.all;
 
@@ -8,7 +8,7 @@ use ieee.std_logic_1164.all;
 entity OrGate is
   port (
     a, b : in std_logic;
-    z : out std_logic
+    z    : out std_logic
   );
 end entity;
 
