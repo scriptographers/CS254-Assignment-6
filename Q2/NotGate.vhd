@@ -1,4 +1,4 @@
--- Component: NOT Gate
+-- Component: NOT Gate using structural modelling
 library work;
 use work.all;
 
